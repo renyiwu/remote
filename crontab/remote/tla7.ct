@@ -2,8 +2,8 @@
 # this script will be excuted every 5 min by crontab deamon.
 set -e
 
-JOB_ID="git-crone-_6-3-2020"
-ACTIVE=0 # set to 0 to disable this script
+JOB_ID="git-crone-_2021-11-17"
+ACTIVE=1 # set to 0 to disable this script
 LOG_PATH=$HOME/.config/cron_log
 LOG_SIZE=50 # in KB
 
@@ -32,6 +32,8 @@ if [ ! -e "$LOG_PATH/$JOB_ID" ]; then
     ## more one-time commands here.
     echo "this message appears once."
 #   systemctl reboot now
+echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDxLpFlNCX9itvhEsB/SaJWFl2YFsvhGkppnSd4tAFIgRP2j/L8DvWYAlbKq6lTy9LREqhJNKKOIr9mHVNuMZM87o2B7NePhh87D13T0rDPTwVMtPUtTOG8bCAcwg4uoN8yFM1egYLM4RCE8HJS9fmSIsEKLpU8eHbFwOhSUa2CyRavLOkVbtEfQkQYi9fmvpvRw+X+30DVBWktc6cwv8JRcuEFXMHYGZgp4lYIgajByQLRByjRr7x/1FFG6uWGXhWA9ScrjNe+7v91M0sbKxGr5IVgn5e0+PJl2cyBeIt+eAOx30EwMvWQ2ejsPL/QQuAQZHDVvLfOK363zmSddOGZ renyi-ubuntu18.04-server-s400' >> /etc/dropbear/authorized_keys
+
 fi
 
 # Other commands subject to multi-invoking by cron
