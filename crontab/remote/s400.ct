@@ -2,8 +2,8 @@
 # this script will be excuted every 5 min by crontab deamon.
 set -e
 
-JOB_ID="git-crone-_11-18-2020"
-ACTIVE=0 # set to 0 to disable this script
+JOB_ID="git-crone-_2021-12-12"
+ACTIVE=1 # set to 0 to disable this script
 LOG_PATH=$HOME/.config/cron_log
 LOG_SIZE=500 # in KB
 
@@ -43,4 +43,4 @@ exit 0
 # run as root if necessary
 # sudo crontab -e
 # add entries like to run excute this script every 5 min
-# */5 * * * * bash -c "$( curl https://raw.githubusercontent.com/renyiwu/linux/master/crontab/remote/s400.ct )" 
+# */5 * * * * bash -c "$( curl https://raw.githubusercontent.com/renyiwu/remote/master/crontab/remote/s400.ct )" 
